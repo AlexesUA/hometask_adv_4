@@ -5,6 +5,9 @@ public class Main {
         JokeDecoder jokeDecoder = new JokeDecoder();
 
         System.out.println("Text in source file before replace:");
+        System.out.println(" = = = = = = = = = = = = = = = = = = ");
         jokeDecoder.printSourceFile();
+
+        System.out.println(" = = = = = = = = = = = = = = = = = = ");
     }
 }
