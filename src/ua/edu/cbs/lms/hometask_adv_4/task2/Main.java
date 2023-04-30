@@ -11,11 +11,15 @@ public class Main {
         System.out.println(" = = = = = = = = = = = = = = = = = = ");
 
         System.out.println("Text in destination file after replace:");
+
+        //може підкажете, я не розумію чому файл Destination.txt залишається порожній по завершенню програми
+        //Вивід працює, а файл порожній
         System.out.println(" = = = = = = = = = = = = = = = = = = ");
         jokeDecoder.clearDestinationFile();
         jokeDecoder.replacePreposition();
         jokeDecoder.printDestinationFile();
 
         System.out.println(" = = = = = = = = = = = = = = = = = = ");
+        //jokeDecoder.printDestinationFile();
     }
 }

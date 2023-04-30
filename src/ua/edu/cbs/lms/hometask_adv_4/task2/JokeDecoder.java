@@ -17,22 +17,24 @@ public class JokeDecoder {
             "|since|through|throughout|till|to|toward|under|underneath|until|up|upon|with|within|without)\\b";
 
     private URL sourceFile = getClass().getResource("Source.txt");
+    private Path pSourceFile; //Це я зробив, щоб подивитись, може десь в шляхах проблема для запису файла
     private URL destinationFile = getClass().getResource("Destination.txt");
+    private Path pDestinationFile; //Це я зробив, щоб подивитись, може десь в шляхах проблема для запису файла
 
     public JokeDecoder() {
         try {
-            if (!Files.exists(Paths.get(sourceFile.toURI()))) {
+            if (!Files.exists(pSourceFile = Paths.get(sourceFile.toURI()))) {
 
-                Files.createFile(Paths.get(sourceFile.toURI()));
+                Files.createFile(pSourceFile);
             }
         }catch(Exception error){
             ErrorsHandling.errorsHandling(error);
         }
 
         try {
-            if (!Files.exists(Paths.get(destinationFile.toURI()))) {
+            if (!Files.exists(pDestinationFile = Paths.get(destinationFile.toURI()))) {
 
-                Files.createFile(Paths.get(destinationFile.getPath()));
+                Files.createFile(pDestinationFile);
             }
         }catch (Exception error) {
             ErrorsHandling.errorsHandling(error);
@@ -40,21 +42,27 @@ public class JokeDecoder {
     }
 
     public void replacePreposition(){
-        try(BufferedReader reader = new BufferedReader(new FileReader(sourceFile.getPath()));
-                FileWriter writer = new FileWriter(destinationFile.getPath(), true)){
+        //System.out.println(pSourceFile);
+        //System.out.println(pSourceFile.toFile());
+        //System.out.println(pDestinationFile);
+        //System.out.println(pDestinationFile.toFile());
+
+        try(BufferedReader reader = new BufferedReader(new FileReader(pSourceFile.toFile()));
+                FileWriter writer = new FileWriter(pDestinationFile.toFile(), true)){
             String line;
             while ((line = reader.readLine()) != null){
                 writer.write(line.replaceAll(prepositionRegex, "Java") + "\n");
+                writer.flush();
             }
-            writer.flush();
+
 
         }catch (Exception error){
             ErrorsHandling.errorsHandling(error);
         }
     }
 
-    private void printFile(URL file){
-        try(BufferedReader reader = new BufferedReader(new FileReader(file.getPath()))){
+    private void printFile(Path file){
+        try(BufferedReader reader = new BufferedReader(new FileReader(file.toFile()))){
             String line;
             while ((line = reader.readLine()) != null){
                 System.out.println(line);
@@ -65,11 +73,11 @@ public class JokeDecoder {
     }
 
     public void printSourceFile(){
-        printFile(sourceFile);
+        printFile(pSourceFile);
     }
 
     public void printDestinationFile(){
-        printFile(destinationFile);
+        printFile(pDestinationFile);
     }
 
     public void clearDestinationFile(){
