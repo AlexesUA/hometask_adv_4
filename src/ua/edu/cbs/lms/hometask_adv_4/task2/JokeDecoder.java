@@ -5,10 +5,10 @@ import ua.edu.cbs.lms.hometask_adv_4.errorshandling.ErrorsHandling;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class JokeDecoder {
     private String prepositionRegex = "\\b(about|above|across|after|against|among|around|as|at" +
@@ -21,18 +21,18 @@ public class JokeDecoder {
 
     public JokeDecoder() {
         try {
-            if (!Files.exists(Path.of(sourceFile.toURI().getPath()))) {
+            if (!Files.exists(Paths.get(sourceFile.toURI()))) {
 
-                Files.createFile(Path.of(sourceFile.getPath()));
+                Files.createFile(Paths.get(sourceFile.toURI()));
             }
         }catch(Exception error){
             ErrorsHandling.errorsHandling(error);
         }
 
         try {
-            if (!Files.exists(Path.of(destinationFile.toURI().getPath()))) {
+            if (!Files.exists(Paths.get(destinationFile.toURI()))) {
 
-                Files.createFile(Path.of(destinationFile.getPath()));
+                Files.createFile(Paths.get(destinationFile.getPath()));
             }
         }catch (Exception error) {
             ErrorsHandling.errorsHandling(error);
@@ -44,7 +44,7 @@ public class JokeDecoder {
                 FileWriter writer = new FileWriter(destinationFile.getPath(), true)){
             String line;
             while ((line = reader.readLine()) != null){
-                writer.write(line.replaceAll(prepositionRegex, "Java"));
+                writer.write(line.replaceAll(prepositionRegex, "Java") + "\n");
             }
             writer.flush();
 
