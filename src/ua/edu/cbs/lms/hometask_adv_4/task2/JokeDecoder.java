@@ -5,6 +5,7 @@ import ua.edu.cbs.lms.hometask_adv_4.errorshandling.ErrorsHandling;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,21 +19,23 @@ public class JokeDecoder {
     private URL sourceFile = getClass().getResource("Source.txt");
     private URL destinationFile = getClass().getResource("Destination.txt");
 
-    public JokeDecoder(){
-        if(!Files.exists(Path.of(sourceFile.getPath()))){
-            try {
+    public JokeDecoder() {
+        try {
+            if (!Files.exists(Path.of(sourceFile.toURI().getPath()))) {
+
                 Files.createFile(Path.of(sourceFile.getPath()));
-            }catch (Exception error){
-                ErrorsHandling.errorsHandling(error);
             }
+        }catch(Exception error){
+            ErrorsHandling.errorsHandling(error);
         }
 
-        if(!Files.exists(Path.of(destinationFile.getPath()))){
-            try {
+        try {
+            if (!Files.exists(Path.of(destinationFile.toURI().getPath()))) {
+
                 Files.createFile(Path.of(destinationFile.getPath()));
-            }catch (Exception error){
-                ErrorsHandling.errorsHandling(error);
             }
+        }catch (Exception error) {
+            ErrorsHandling.errorsHandling(error);
         }
     }
 

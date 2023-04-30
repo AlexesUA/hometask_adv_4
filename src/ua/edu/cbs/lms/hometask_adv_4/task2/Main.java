@@ -9,5 +9,13 @@ public class Main {
         jokeDecoder.printSourceFile();
 
         System.out.println(" = = = = = = = = = = = = = = = = = = ");
+
+        System.out.println("Text in destination file after replace:");
+        System.out.println(" = = = = = = = = = = = = = = = = = = ");
+        jokeDecoder.clearDestinationFile();
+        jokeDecoder.replacePreposition();
+        jokeDecoder.printDestinationFile();
+
+        System.out.println(" = = = = = = = = = = = = = = = = = = ");
     }
 }
