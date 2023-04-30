@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ced8c106-e4ca-4170-94dc-8093d09510ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ua/edu/cbs/lms/hometask_adv_4/errorshandling/ErrorsHandling.java" afterDir="false" />
+    <list default="true" id="ced8c106-e4ca-4170-94dc-8093d09510ea" name="Changes" comment="Created ErrorsHandling class">
+      <change afterPath="$PROJECT_DIR$/src/ua/edu/cbs/lms/hometask_adv_4/task2/Destination.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ua/edu/cbs/lms/hometask_adv_4/task2/JokeDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ua/edu/cbs/lms/hometask_adv_4/task2/Source.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +60,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682847075445</updated>
-      <workItem from="1682847076460" duration="728000" />
+      <workItem from="1682847076460" duration="3277000" />
     </task>
+    <task id="LOCAL-00001" summary="Created ErrorsHandling class">
+      <created>1682847826761</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682847826761</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created ErrorsHandling class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created ErrorsHandling class" />
   </component>
 </project>
