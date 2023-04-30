@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ced8c106-e4ca-4170-94dc-8093d09510ea" name="Changes" comment="Edit bug ot constructor in JokeDecoder">
+    <list default="true" id="ced8c106-e4ca-4170-94dc-8093d09510ea" name="Changes" comment="Created TimeElapsed class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ua/edu/cbs/lms/hometask_adv_4/task2/JokeDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/edu/cbs/lms/hometask_adv_4/task2/JokeDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ua/edu/cbs/lms/hometask_adv_4/task2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/edu/cbs/lms/hometask_adv_4/task2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ua/edu/cbs/lms/hometask_adv_4/task3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ua/edu/cbs/lms/hometask_adv_4/task3/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "task2",
+    "git-widget-placeholder": "task3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682852999534</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created TimeElapsed class">
+      <created>1682855253036</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682855253036</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +121,8 @@
     <MESSAGE value="Created Main class" />
     <MESSAGE value="Added constructor with created files in JokeDecoder" />
     <MESSAGE value="Edit bug ot constructor in JokeDecoder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit bug ot constructor in JokeDecoder" />
+    <MESSAGE value="Created TimeElapsed class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created TimeElapsed class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

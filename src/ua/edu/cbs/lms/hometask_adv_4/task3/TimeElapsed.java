@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 public class TimeElapsed {
     public static String timeElapsed(LocalDateTime fromTime, LocalDateTime toTime){
-        Duration duration = Duration.between(toTime, fromTime);
+        Duration duration = Duration.between(fromTime, toTime);
         long years = duration.toDays() / 365;
         long months = (duration.toDays() % 365) / 30;
         long days = duration.toDays() % 30;
